@@ -1,0 +1,84 @@
+html,
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./images/temple.avif);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: block;
+}
+
+.section {
+    padding: 80px 80px;
+    display: block;
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: coral;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #f56c3a;
+}
+
+select {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 12px;
+    width: 200px;
+}
+
+.btn-full {
+    width: 80%;
+}
+
+.picture {
+    height: 70vh;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.display-box {
+    text-align: center;
+}
+
+#pray1,
+#pray2 {
+    display: none;
+}
+
+#aarti1,
+#aarti2 {
+    height: 150px;
+    display: none;
+}
