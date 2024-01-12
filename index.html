@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Digital Temple</title>
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="index.js"></script>
+
+    </head>
+    <body>
+
+        <section>
+            <div class="row">
+                <div class="selector">
+                    <select name="" id="myDropdown" class="selectgod">
+                        <option value="krishna">Krishna</option>
+                        <option value="mahadev">Mahadev</option>
+                        <option value="ram">Ram</option>
+                        <option value="ganesha">Ganesha</option>
+                        <option value="saraswati">Saraswati</option>
+                        <option value="bajrang-bali">Bajrang Bali</option>
+                    </select>
+                    <button class="btn" onclick="showImage()">Proceed</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row">
+                
+                <div class="display-box">
+                    <img src="./images/pooja-thali.png" id="aarti1" alt="pooja">
+                    <img src="./images/praying2.png" id="pray1" alt="praying">
+                    <img src="./images/krishna.jpg" id="imageDisplay" class="picture" alt="God">
+                    <img src="./images/praying1.png" id="pray2" alt="praying">
+                    <img src="./images/pooja-thali.png" id="aarti2" alt="pooja">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row">
+                <div class="col span_1_of_4">
+                    <button class="btn btn-full" onclick="pray()">Pray</button>
+                </div>
+                <div class="col span_1_of_4">
+                    <button class="btn btn-full" onclick="aarti()">Perform Aarti</button>
+                </div>
+                <div class="col span_1_of_4">
+                    <button class="btn btn-full" onclick="meditate()">Meditate</button>
+                </div>
+                <div class="col span_1_of_4">
+                    <button class="btn btn-full" onclick="donate()">Make a Donation</button>
+                </div>
+            </div>
+        </section>
+
+        
+         
+    </body>
+</html>
