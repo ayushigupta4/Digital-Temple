@@ -75,10 +75,13 @@ select {
 #pray1,
 #pray2 {
     display: none;
+    height: 25vh;
 }
 
-#aarti1,
-#aarti2 {
-    height: 150px;
+#aarti1 {
+    position: absolute;
+    height: 20vh;
     display: none;
+    transform: translate(-50%,-50%);
+
 }

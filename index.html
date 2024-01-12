@@ -4,7 +4,7 @@
         <title>Digital Temple</title>
         <link rel="stylesheet" href="./css/grid.css">
         <link rel="stylesheet" href="./styles.css">
-        <script src="index.js"></script>
+        
 
     </head>
     <body>
@@ -12,15 +12,15 @@
         <section>
             <div class="row">
                 <div class="selector">
-                    <select name="" id="myDropdown" class="selectgod">
-                        <option value="krishna">Krishna</option>
+                    <select name="" id="myDropdown" class="selectgod" onchange="showImage()">
+                        <option value="krishna">Shree Krishna</option>
                         <option value="mahadev">Mahadev</option>
-                        <option value="ram">Ram</option>
-                        <option value="ganesha">Ganesha</option>
-                        <option value="saraswati">Saraswati</option>
+                        <option value="ram">Shree Ram</option>
+                        <option value="ganesha">Ganesha ji</option>
+                        <option value="lakshmi">Lakshmi ji</option>
                         <option value="bajrang-bali">Bajrang Bali</option>
                     </select>
-                    <button class="btn" onclick="showImage()">Proceed</button>
+                    
                 </div>
             </div>
         </section>
@@ -33,7 +33,6 @@
                     <img src="./images/praying2.png" id="pray1" alt="praying">
                     <img src="./images/krishna.jpg" id="imageDisplay" class="picture" alt="God">
                     <img src="./images/praying1.png" id="pray2" alt="praying">
-                    <img src="./images/pooja-thali.png" id="aarti2" alt="pooja">
                 </div>
             </div>
         </section>
@@ -56,6 +55,6 @@
         </section>
 
         
-         
+        <script src="index.js"></script> 
     </body>
 </html>
