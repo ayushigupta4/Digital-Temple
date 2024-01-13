@@ -4,7 +4,7 @@ const centerY = window.innerHeight / 2;
 const radius = 200;
 let angle = 0;
 var dropdown = document.getElementById("myDropdown");
-var audio;
+var audio = new Audio();
 
 
 function showImage(){
@@ -31,7 +31,10 @@ function showImage(){
 }
 
 function pray(){
-    stopAarti();
+
+    if(!audio.paused)
+        stopAarti();
+    //stopMeditation();
     document.getElementById('pray1').style.display = "initial";
     document.getElementById('pray2').style.display = "initial";
 
@@ -41,6 +44,8 @@ function aarti(){
     var selectedOption = dropdown.options[dropdown.selectedIndex].value;
 
     stopPraying();
+    if(!audio.paused)
+        stopMeditation();
     document.getElementById('aarti1').style.display = "initial";
 
     movePlate();
@@ -76,7 +81,8 @@ function movePlate() {
 
 function meditate(){
     stopPraying();
-    stopAarti();
+    if(!audio.paused)
+        stopAarti();
 
     audio = new Audio('./audios/meditation.mp3');
     audio.play();
@@ -84,6 +90,9 @@ function meditate(){
 
 function donate(){
     stopPraying();
+    if(!audio.paused)
+        stopAarti();
+    //stopMeditation();
     alert("Not taking Donations currently. Thank you for consideration!")
 }
 
@@ -96,5 +105,9 @@ function stopAarti() {
     document.getElementById('aarti1').style.display = "none";
     audio.pause();
 
+}
+
+function stopMeditation() {
+    audio.pause();
 }
 
