@@ -4,6 +4,7 @@ const centerY = window.innerHeight / 2;
 const radius = 200;
 let angle = 0;
 var dropdown = document.getElementById("myDropdown");
+var audio;
 
 
 function showImage(){
@@ -30,21 +31,19 @@ function showImage(){
 }
 
 function pray(){
+    stopAarti();
     document.getElementById('pray1').style.display = "initial";
     document.getElementById('pray2').style.display = "initial";
-    document.getElementById('aarti1').style.display = "none";
+
 }
 
 function aarti(){
     var selectedOption = dropdown.options[dropdown.selectedIndex].value;
 
-    document.getElementById('pray1').style.display = "none";
-    document.getElementById('pray2').style.display = "none";
+    stopPraying();
     document.getElementById('aarti1').style.display = "initial";
 
     movePlate();
-
-    var audio;
 
     if(selectedOption == "krishna")
         audio = new Audio('./audios/krishna-aarti.mp3');
@@ -76,19 +75,26 @@ function movePlate() {
 }
 
 function meditate(){
-    document.getElementById('pray1').style.display = "none";
-    document.getElementById('pray2').style.display = "none";
-    document.getElementById('aarti1').style.display = "none";
+    stopPraying();
+    stopAarti();
 
-    var audio = new Audio('./audios/meditation.mp3');
+    audio = new Audio('./audios/meditation.mp3');
     audio.play();
 }
 
 function donate(){
+    stopPraying();
+    alert("Not taking Donations currently. Thank you for consideration!")
+}
+
+function stopPraying() {
     document.getElementById('pray1').style.display = "none";
     document.getElementById('pray2').style.display = "none";
-    document.getElementById('aarti1').style.display = "none";
+}
 
-    alert("Not taking Donations currently. Thank you for consideration!")
+function stopAarti() {
+    document.getElementById('aarti1').style.display = "none";
+    audio.pause();
+
 }
 
