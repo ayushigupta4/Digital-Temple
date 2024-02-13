@@ -24,7 +24,7 @@ function showImage(){
     else if(selectedOption == "lakshmi")
         image.src = "./images/lakshmi-devi.jpg";
     else if(selectedOption == "bajrang-bali")
-        image.src = "./images/bajrang-bali.webp";
+        image.src = "./images/Bajrang-bali.webp";
     else
         image.src = "";
 
